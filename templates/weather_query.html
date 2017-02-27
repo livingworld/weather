@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}天气查询信息{% endblock %}
+{% block page_content %}
+<div class="page-header">
+    <center><h1>欢迎您使用天气查询系统</h1></center>
+</div>
+
+{% include 'web.html' %}
+
+<center>
+
+{% if weather %}
+    <p>{{weather}}</p>
+{% elif help %}
+    <p>输入城市名并按回车键或点击Search，获取当前天气</p>
+    <p>点击Help，查看帮助</p>
+    <p>点击History，查看查询历史</p>
+{% elif history %}
+    {% for item in history %}
+    <p>{{ item }}</p>
+    {% endfor %}
+{% else %}
+{% endif %}
+</center>
+{% endblock %}
