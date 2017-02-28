@@ -1,1 +1,1 @@
-web: gunicorn hetao:app --log-file -
+web: gunicorn query_web:app --log-file -

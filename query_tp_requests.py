@@ -37,7 +37,6 @@ def fetchWeather(location):
     }, timeout=1)
     result = result.text
     result = json.loads(result)
-    print(result)
     return result
 
 def history_weather():

@@ -11,29 +11,15 @@
 <body>
     <div style="padding:50px 300px 10px;">
         <ul id="center_ul">
-          <li><div>
-              <form action="/weather_query.html" method="post" class="bs-example bs-example-form" role="form">
-              <div class="row">
-                  <div class="col-lg-6">
-                      <div class="input-group">
-                          <input type="text" name="location" class="form-control" placeholder="输入城市名 查天气">
-                          <span class="input-group-btn">
-                              <button class="btn btn-primary" type="submit" name="button" value="Search">
-                                  Search!
-                              </button>
-                          </span>
-                      </div><!-- /input-group -->
-                  </div><!-- /.col-lg-6 -->
-              </div><!-- /.row -->
-          </form>
-      </div></li>
-      <li><div>
-          <form action="/weather_query.html" method="get">
-              <li><button type="submit" name="button" value="History" class="btn btn-primary">History</button></li>
-              <li><button type="submit" name="button" value="Help" class="btn btn-primary">Help</button></li>
-              </form>
+            <li><div>
+                <li><form action="/weather_query.html" method="POST">
+                    <li><input type="text" name="location"  placeholder="输入城市名 查天气"></li>
+                    <li><button type="submit" name="button" value="Search" >Search</button></li>
+                    <li><button type="submit" name="button" value="History">History</button></li>
+                    <li><button type="submit" name="button" value="Help">Help</button></li>
+              </form></li>
+              </div></li>
           </ul>
-        </div></li>
     </div>
 </body>
 </html>
