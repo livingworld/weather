@@ -29,12 +29,16 @@ def fetchWeather(location):
     LANGUAGE='zh-Hans'
     UNIT='c'
 #通过 parse 将请求参数转为字符串
-    result = requests.get(API, params={
-        'key': KEY,
-        'location': location,
-        'language': LANGUAGE,
-        'unit': UNIT
-    }, timeout=1)
+    try:
+        result = requests.get(API, params={
+            'key': KEY,
+            'location': location,
+            'language': LANGUAGE,
+            'unit': UNIT
+        }, timeout=1)
+    except requests.exceptions.ConnectionError:
+        r.status_code = "Connection refused"
+        
     result = result.text
     result = json.loads(result)
     return result
