@@ -34,7 +34,7 @@ def fetchWeather(location):
         'location': location,
         'language': LANGUAGE,
         'unit': UNIT
-    }, timeout=1)
+    })
     result = result.text
     result = json.loads(result)
     return result
